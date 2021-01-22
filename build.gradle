@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.azoraqua'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testImplementation(platform('org.junit:junit-bom:5.7.0'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation('org.mockito:mockito-core:2.+')
+    testImplementation('org.powermock:powermock-module-junit4:2.0.2')
+    testImplementation('org.powermock:powermock-api-mockito2:2.0.2')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

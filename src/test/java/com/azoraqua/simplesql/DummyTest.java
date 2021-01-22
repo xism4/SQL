@@ -1,0 +1,31 @@
+package com.azoraqua.simplesql;
+
+import com.azoraqua.simplesql.server.Server;
+import com.azoraqua.simplesql.server.ServerFactory;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.powermock.modules.junit4.PowerMockRunner;
+
+@RunWith(PowerMockRunner.class)
+public final class DummyTest {
+
+    @BeforeAll
+    public static void setup() {
+        ServerFactory.register(new DummyServer());
+
+        Assertions.assertEquals("dummy", Server.factory().create("qsimplesql:dummy").getName());
+    }
+
+    @Test
+    public void test() {
+        Assertions.assertEquals("dummy", QSimpleSQL.create(Server.DSN.builder().withDriver("qsimplesql:dummy").build()).getName());
+    }
+
+    @AfterAll
+    public static void tearDown() {
+        ServerFactory.unregister(DummyServer.class);
+    }
+}
