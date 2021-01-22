@@ -15,8 +15,6 @@ public final class DummyTest {
     @BeforeAll
     public static void setup() {
         ServerFactory.register(new DummyServer());
-
-        Assertions.assertEquals("dummy", Server.factory().create("qsimplesql:dummy").getName());
     }
 
     @Test
