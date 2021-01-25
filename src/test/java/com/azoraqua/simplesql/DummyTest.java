@@ -1,6 +1,5 @@
 package com.azoraqua.simplesql;
 
-import com.azoraqua.simplesql.server.Server;
 import com.azoraqua.simplesql.server.ServerFactory;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
@@ -19,7 +18,7 @@ public final class DummyTest {
 
     @Test
     public void test() {
-        Assertions.assertEquals("dummy", QSimpleSQL.create(Server.DSN.builder().withDriver("qsimplesql:dummy").build()).getName());
+        Assertions.assertEquals("dummy", QSimpleSQL.create("dummy").getName());
     }
 
     @AfterAll

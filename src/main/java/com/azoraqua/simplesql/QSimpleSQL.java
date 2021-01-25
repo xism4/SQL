@@ -16,4 +16,8 @@ public final class QSimpleSQL {
     public static Server create(String driver, String host, String username, String password, String schema) {
         return Server.factory().create(driver, host, username, password, schema);
     }
+
+    public static Server create(String driver) {
+        return Server.factory().create(driver);
+    }
 }

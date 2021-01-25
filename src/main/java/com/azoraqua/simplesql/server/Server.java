@@ -47,6 +47,11 @@ public abstract class Server {
             this.schema = schema;
         }
 
+        // <driver>://<username>:<password>@<host>:<port>/<schema>
+        public static DSN from(String dsn) {
+            throw new UnsupportedOperationException("Not implemented yet.");
+        }
+
         public static ServerBuilder builder() {
             return DSN_BUILDER;
         }
