@@ -1,11 +1,11 @@
-package com.azoraqua.simplesql;
+package com.xism4.simplesql;
 
-import com.azoraqua.simplesql.server.Server;
+import com.xism4.simplesql.server.Server;
 
-public final class QSimpleSQL {
+public final class SimpleSQL {
 
     // Suppresses default constructor, ensuring non-instantiability.
-    private QSimpleSQL() {
+    private SimpleSQL() {
         throw new AssertionError();
     }
 

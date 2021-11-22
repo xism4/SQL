@@ -1,4 +1,4 @@
-package com.azoraqua.simplesql.server;
+package com.xism4.simplesql.server;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

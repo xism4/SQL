@@ -1,6 +1,7 @@
-package com.azoraqua.simplesql;
+package com.xism4.simplesql;
 
-import com.azoraqua.simplesql.server.ServerFactory;
+import com.xism4.simplesql.SimpleSQL;
+import com.xism4.simplesql.server.ServerFactory;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -9,20 +10,20 @@ import org.junit.runner.RunWith;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 @RunWith(PowerMockRunner.class)
-public final class DummyTest {
+public final class MineLatinTest {
 
     @BeforeAll
     public static void setup() {
-        ServerFactory.register(new DummyServer());
+        ServerFactory.register(new MineLatin());
     }
 
     @Test
     public void test() {
-        Assertions.assertEquals("dummy", QSimpleSQL.create("dummy").getName());
+        Assertions.assertEquals("minelatin", SimpleSQL.create("SternalBoard").getName());
     }
 
     @AfterAll
     public static void tearDown() {
-        ServerFactory.unregister(DummyServer.class);
+        ServerFactory.unregister(MineLatin.class);
     }
 }

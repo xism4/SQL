@@ -1,4 +1,4 @@
-package com.azoraqua.simplesql.server;
+package com.xism4.simplesql.server;
 
 public final class ServerBuilder {
 
