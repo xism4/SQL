@@ -9,7 +9,7 @@ public final class ServerBuilder {
     private String schema;
 
     // Only for internal purposes.
-    protected ServerBuilder() {
+     ServerBuilder() {
     }
 
     public ServerBuilder withDriver(String driver) {

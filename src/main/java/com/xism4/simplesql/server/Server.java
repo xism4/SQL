@@ -5,17 +5,8 @@ public abstract class Server {
     private static final ServerFactory SERVER_FACTORY = new ServerFactory();
     private static final ServerBuilder DSN_BUILDER = new ServerBuilder();
 
-    private final String host;
-    private final String username;
-    private final String password;
-    private final String schema;
-
     // Implementations should override it, implementations should override it.
     public Server(String host, String username, String password, String schema) {
-        this.host = host;
-        this.username = username;
-        this.password = password;
-        this.schema = schema;
     }
 
     // Only for internal purposes, implementations should override it.
@@ -33,11 +24,11 @@ public abstract class Server {
 
     public static final class DSN {
 
-        protected final String driver;
-        protected final String host;
-        protected final String username;
-        protected final String password;
-        protected final String schema;
+        final String driver;
+        final String host;
+        final String username;
+        final String password;
+        final String schema;
 
         public DSN(String driver, String host, String username, String password, String schema) {
             this.driver = driver;
