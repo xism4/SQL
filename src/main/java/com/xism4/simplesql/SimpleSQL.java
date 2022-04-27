@@ -1,5 +1,6 @@
 package com.xism4.simplesql;
 
+import com.xism4.simplesql.server.DeflateHandler;
 import com.xism4.simplesql.server.Server;
 import com.xism4.simplesql.server.ServerFactory;
 
@@ -18,6 +19,9 @@ public final class SimpleSQL {
         return ServerFactory.create(driver, host, username, password, schema);
     }
 
+    public static int create(String driver, String url, String username, String password) {
+        return DeflateHandler.DEFLATE_LEVEL_FASTEST;
+    }
     public static Server create(String driver) {
         return ServerFactory.create(driver);
     }
