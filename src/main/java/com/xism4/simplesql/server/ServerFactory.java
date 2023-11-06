@@ -72,7 +72,8 @@ public class ServerFactory {
      * @param driver The driver to create a server with.
      * @return The constructed server.
      * @throws IllegalArgumentException When the driver parameter is null.
-     * @throws IllegalStateException    When the driver does not have an accessible constructor.
+     * @throws IllegalStateException When the driver does not have an accessible constructor.
+     * throws IllegalStateExceitpion When the driver is not registered.
      * @since 1.0.0
      */
     @SuppressWarnings({"unchecked", "deprecation"})
@@ -97,7 +98,7 @@ public class ServerFactory {
             } else {
                 throw new IllegalStateException("No driver registered with that name.");
             }
-        } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+        } catch ( IllegalArgumentException| NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
             throw new IllegalStateException("Driver does not have an accessible constructor.");
         }
     }

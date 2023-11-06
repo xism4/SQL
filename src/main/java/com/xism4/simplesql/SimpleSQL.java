@@ -18,10 +18,6 @@ public final class SimpleSQL {
     public static Server create(String driver, String host, String username, String password, String schema) {
         return ServerFactory.create(driver, host, username, password, schema);
     }
-
-    public static int create(String driver, String url, String username, String password) {
-        return DeflateHandler.DEFLATE_LEVEL_FASTEST;
-    }
     public static Server create(String driver) {
         return ServerFactory.create(driver);
     }
