@@ -1,6 +1,5 @@
 package com.xism4.simplesql;
 
-import com.xism4.simplesql.server.DeflateHandler;
 import com.xism4.simplesql.server.Server;
 import com.xism4.simplesql.server.ServerFactory;
 
